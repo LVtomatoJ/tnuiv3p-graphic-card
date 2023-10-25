@@ -140,7 +140,7 @@ const {
 	    {{ tagItem }}
 	  </view>
 	  <view v-if="viewCount && viewCount!==0">		  
-	  .{{viewCount}} 人围观
+	  ·{{viewCount}} 人围观
 	  </view>
 	</view>
       <view :class="[ns.e('bottom-info__left')]">

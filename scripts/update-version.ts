@@ -46,7 +46,7 @@ async function main() {
   // 生成最终的版本号
   let packageVersion = ''
   // 获取当前版本号
-  const currentVersion = tuniaoUIVue3UniappPlugin.manifest.version || ''
+  const currentVersion =  ''
   // const currentVersion = '1.0.0'
   // 通过正则表达式获取版本号的相关信息
   const versionReg = /^([\d+.]+)(-(\w+)\.(\d+))*$/

@@ -1,26 +1,19 @@
 {
-  "name": "tnuiv3p-plugin",
-  "version": "1.0.10",
-  "description": "TuniaoUI vue3 uniapp 插件",
-  "keywords": [
-    "tn",
-    "tuniao",
-    "tuniao-ui",
-    "图鸟",
-    "uniapp",
-    "uniapp插件"
-  ],
+  "name": "mz-tnuiv3p-plugin",
+  "version": "1.0.12",
+  "description": " tuniao图文插件 ui修改",
+  "keywords": [],
   "license": "Apache 2.0",
-  "author": "Tuniao Technology Co., Ltd.",
+  "author": "lvtomatoj",
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tuniaoTech/tnuiv3p-graphic-card"
+    "url": "https://github.com/lvtomatoj/tnuiv3p-graphic-card"
   },
   "bugs": {
-    "url": "https://github.com/tuniaoTech/tnuiv3p-graphic-card/issues"
+    "url": "https://github.com/lvtomatoj/tnuiv3p-graphic-card/issues"
   },
   "peerDependencies": {
     "@tuniao/tn-icon": "^1.4.0",

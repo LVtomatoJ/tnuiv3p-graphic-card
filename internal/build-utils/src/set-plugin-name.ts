@@ -24,9 +24,9 @@ class SetPluginPackageName extends Transform {
     // 先将读取到的内容转换为JSON对象
     const pkg = JSON.parse(content)
     // 设置包名
-    pkg.name = `tnuiv3p-${this.pluginName}`
+    pkg.name = `mz-tnuiv3p-${this.pluginName}`
     // 设置作者
-    pkg.author = this.pluginAuthor
+    pkg.author = 'lvtomatoj'
 
     // 将JSON对象转换为字符串,并返回
     return JSON.stringify(pkg, null, 2)

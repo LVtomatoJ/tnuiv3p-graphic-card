@@ -46,7 +46,8 @@ const {
           <image class="image" :src="avatar" mode="aspectFill" />
         </view>
         <view :class="[ns.e('brief-info__data')]">
-          <view class="title tn-text-ellipsis-1">{{ title }}</view>
+          <!-- <view class="title tn-text-ellipsis-1">{{ title }}</view> -->
+		  <view>{{userName}}</view>
           <view v-if="description" class="desc tn-text-ellipsis-1">
             {{ description }}
           </view>
@@ -67,20 +68,12 @@ const {
     <view :class="[ns.e('container')]">
       <!-- 内容 -->
       <view :class="[ns.e('content')]">
-        <!-- 标签和内容 -->
-        <view :class="[ns.e('content__tags')]">
-          <view
-            v-for="(tagItem, tagIndex) in tags"
-            :key="tagIndex"
-            class="tag-item"
-            :class="[tagClass]"
-            :style="tagStyle"
-          >
-            <TnIcon name="topics-fill" />
-            {{ tagItem }}
-          </view>
-        </view>
+
         <view :class="[ns.e('content__data')]">
+			<view style="display: flex;justify-content: flex-start;">
+				<slot name="titleLeft"></slot>
+				<view class="title tn-text-ellipsis-1">{{ title }}</view>
+			</view>
           {{ content }}
         </view>
       </view>
@@ -134,6 +127,22 @@ const {
     <view
       :class="[ns.e('bottom-info'), ns.is('no-content', !!$slots.bottomRight)]"
     >
+	<!-- 标签 -->
+	<view :class="[ns.e('content__tags')]">
+	  <view
+	    v-for="(tagItem, tagIndex) in tags"
+	    :key="tagIndex"
+	    class="tag-item"
+	    :class="[tagClass]"
+	    :style="tagStyle"
+	  >
+	    <TnIcon name="topics-fill" />
+	    {{ tagItem }}
+	  </view>
+	  <view v-if="viewCount && viewCount!==0">		  
+	  .{{viewCount}} 人围观
+	  </view>
+	</view>
       <view :class="[ns.e('bottom-info__left')]">
         <view
           v-if="showView"

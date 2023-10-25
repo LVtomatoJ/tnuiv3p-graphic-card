@@ -18,6 +18,13 @@ export const graphicCardProps = buildProps({
     required: true,
   },
   /**
+   * @description 用户名
+   */
+  userName: {
+	 type: String,
+	 required: true,
+	},
+  /**
    * @description 描述
    */
   description: {
@@ -55,14 +62,14 @@ export const graphicCardProps = buildProps({
    */
   showMore: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   /**
    * @description 显示查看数量
    */
   showView: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   /**
    * @description 是否激活查看
@@ -102,7 +109,7 @@ export const graphicCardProps = buildProps({
    */
   showComment: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   /**
    * @description 是否激活评论
@@ -142,7 +149,7 @@ export const graphicCardProps = buildProps({
    */
   showLike: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   /**
    * @description 是否激活点赞
@@ -182,7 +189,7 @@ export const graphicCardProps = buildProps({
    */
   showViewUser: {
     type: Boolean,
-    default: true,
+    default: false,
   },
   /**
    * @description 查看用户头像列表

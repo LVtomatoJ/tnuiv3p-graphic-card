@@ -13,6 +13,7 @@ const graphicData: {
   commentCount: number
   likeCount: number
   viewUserAvatars: string[]
+  userName: string
 }[] = []
 
 const generateData = () => {
@@ -23,12 +24,13 @@ const generateData = () => {
       title: '文章标题',
       description: '2023年6月30日',
       tags: ['标签1', '标签2'],
+	  userName:'神秘同学8888',
       content:
         '看看打开打开年份记得当年开始放假哦额外欺骗人u饿哦漂亮放佛怕打雷舒服呢我脾气破费了发多少呢；否，可能打飞机哦喷泉哦怕可能地方打开螺丝粉年份的肌肤看能否。',
       images: Array.from({ length: i + 1 }).map(
         () => 'https://tnuiimage.tnkjapp.com/swiper/ad1.jpg'
       ),
-      viewCount: 100 + i,
+      viewCount: 0 + i,
       commentCount: 101 + i,
       likeCount: 102 + i,
       viewUserAvatars: [
@@ -61,10 +63,14 @@ generateData()
         :comment-count="item.commentCount"
         :like-count="item.likeCount"
         :view-user-avatars="item.viewUserAvatars"
+		:user-name="item.userName"
+		showLike
+		showComment
         active-like
       >
         <template #briefOperation> 关注 </template>
-        <template #bottomRight>123</template>
+		<template #titleLeft> <div style="width:40px;">置顶</div> </template>
+        <!-- <template #bottomRight>123</template> -->
       </TnGraphicCard>
     </view>
   </view>

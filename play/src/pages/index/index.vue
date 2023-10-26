@@ -63,12 +63,13 @@ generateData()
         :comment-count="item.commentCount"
         :like-count="item.likeCount"
         :view-user-avatars="item.viewUserAvatars"
-		:user-name="item.userName"
+				:user-name="item.userName"
 		showLike
 		showComment
         active-like
       >
         <template #briefOperation> 关注 </template>
+				<template #imageLeft> 123</template>
 		<template #titleLeft> <div style="width:40px;">置顶</div> </template>
         <!-- <template #bottomRight>123</template> -->
       </TnGraphicCard>

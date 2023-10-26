@@ -39,6 +39,7 @@ const {
     <!-- 简要信息 -->
     <view :class="[ns.e('brief-info')]">
       <view :class="[ns.e('brief-info__content')]">
+		<slot name="imageLeft"></slot>
         <view
           :class="[ns.e('brief-info__avatar')]"
           @tap.stop="handleAvatarClick"
@@ -139,7 +140,7 @@ const {
 	    <TnIcon name="topics-fill" />
 	    {{ tagItem }}
 	  </view>
-	  <view v-if="viewCount && viewCount!==0">		  
+	  <view v-if="viewCount && viewCount!==0" style="color: #AAAAAA;">		  
 	  ·{{viewCount}} 人围观
 	  </view>
 	</view>

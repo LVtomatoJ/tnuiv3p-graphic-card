@@ -106,7 +106,7 @@
 			</view>
 		</view>
 		<!-- 分割线 -->
-		<view style="width: 100%;height: 2px;background-color: #E5E5E5;margin-top: 10px;"></view>
+		<view style="width: 100%;height: 1px;background-color: #E5E5E5;margin-top: 10px;"></view>
 		<!-- 底部信息 -->
 		<view :class="[ns.e('bottom-info'), ns.is('no-content', !!$slots.bottomRight)]">
 			<!-- 标签 -->

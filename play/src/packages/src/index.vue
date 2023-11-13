@@ -76,7 +76,7 @@
 			<view v-if="!!imageCount" :class="[ns.e('images')]">
 				<!-- 一张图片 -->
 				<view v-if="imageCount === 1" :class="[ns.em('images', 'item'), ns.is('one')]">
-					<TnLazyLoad :src="images[0]" />
+					<TnPhotoAlbum :data="images" :column="2" />
 				</view>
 				<!-- 两张图片 -->
 				<view v-if="imageCount === 2" :class="[ns.em('images', 'item'), ns.is('two')]">
@@ -84,7 +84,8 @@
 				</view>
 				<!-- 三张图片 -->
 				<view v-if="imageCount === 3" :class="[ns.em('images', 'item'), ns.is('three')]">
-					<view class="image-wrapper-left">
+					<TnPhotoAlbum :data="images" :column="3" />
+					<!-- <view class="image-wrapper-left">
 						<view class="image-container">
 							<TnLazyLoad :src="images[0]" />
 						</view>
@@ -96,7 +97,7 @@
 						<view class="image-container">
 							<TnLazyLoad :src="images[2]" />
 						</view>
-					</view>
+					</view> -->
 				</view>
 				<!-- 四张图片 -->
 				<view v-if="imageCount === 4" :class="[ns.em('images', 'item'), ns.is('four')]">
@@ -112,8 +113,8 @@
 			<!-- 标签 -->
 			<view :class="[ns.e('content__tags')]">
 				<view v-for="(tagItem, tagIndex) in tags" :key="tagIndex" class="tag-item" :class="[tagClass]"
-					:style="tagStyle">
-					<TnIcon name="topics-fill" />
+					 style="background-color: none; color: black;">
+					<TnIcon name="topics-fill" style="color: #07c160" />
 					{{ tagItem }}
 				</view>
 				<view v-if="viewCount && viewCount!==0" style="color: #AAAAAA;">
